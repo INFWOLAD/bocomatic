@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Bocomatic",
+  "version": "0.1.0",
+  "description": "Bocom平台增强工具",
+  "author": "cosz",
+  "action": {
+    "default_popup": "popup/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content-cmc.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content-idev.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["storage", "tabs"]
+}
